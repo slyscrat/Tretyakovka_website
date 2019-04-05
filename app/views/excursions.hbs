@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<head>
+<title>Третьяковская галерея</title>
+<meta charset="utf-8">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+<link rel="shortcut icon" href="./images/demo/logo.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="./css/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<h1 id="role" hidden>{{user.role}}</h1>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('./images/demo/backgrounds/05.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="./">Третьяковская Галерея</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="#">Экскурсии</a></li>
+          <li><a class="drop" href="#">Галерея</a>
+            <ul>
+              <li><a href="./departs">Адреса</a></li>
+              <li><a href="./employees">Работники</a></li>
+			  <li><a href="./tickets">Билеты</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Образование</a>
+            <ul>
+              <li><a href="./programms">Программы</a></li>
+              <li><a class="drop" href="#">Картины</a>
+                <ul>
+                  <li><a href="./excursions">Экскурсии</a></li>
+                  <li><a href="./exhibitions">Выставки</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./dashboard">Личный кабинет</a></li>
+		  <li><a  id="exch" href="./logout">Выход</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Экскурсии</h6>
+    </div>
+    <ul class="nospace group elements">
+	{{#each result}}
+      <li class="one_third first" style="margin-bottom: 50px;">
+        <article><a href="#"><i class="fa fa-area-chart"></i></a>
+          <h6 class="heading">{{this.name}}</h6>
+          <p>{{this.employee.name}}</br>Возраст: {{this.age_rate}}</br>Длительность: {{this.duration}}</p>
+        </article>
+      </li>
+	{{/each}}
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+  </div>
+  <!--style="display: none;" -->
+  <div class="wrapper row2" id="container">
+    <section class="hoc container clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading">Редактор</h6>
+	  <p>{{message}}</p>
+    </div>
+    <ul class="nospace group elements">
+	{{#each result}}
+      <li class="one_third first">
+        <form name="deleteExcursion" method="post" action="/excursions">
+        <input class="text" name="id" type="text" value="{{this.id}}" hidden="true"/>
+        <input class="text" name="name" type="text" value="{{this.name}}"/>
+        <input class="text" name="age_rate" type="text" value="{{this.age_rate}}"/>
+        <input class="text" name="duration" type="text" value="{{this.duration}}"/>
+        <input class="text" name="guideName" type="text" value="{{this.employee.name}}"/>
+        <input class="btn" type="submit" name="action" value="Delete" />
+        <input class="btn" type="submit" name="action" value="Update" />
+		</form>
+      </li>
+	{{/each}} 
+	<form name="addExcursion" method="post" action="/excursions">
+        <input class="text" name="name" type="text"/>
+        <input class="text" name="age_rate" type="text"/>
+        <input class="text" name="duration" type="text"/>
+        <input class="text" name="guideName" type="text"/>
+        <input class="btn" type="submit" name="action" value="Add" /></td>
+    </form>
+    </ul>
+    <!-- ################################################################################################ -->
+  </section>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved</p>
+<!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<a id="backtotop" href="#top"><i class="fa fa-chevron-up"></i></a>
+<!-- JAVASCRIPTS -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.backtotop.js"></script>
+<script src="./js/jquery.mobilemenu.js"></script>
+<script src="./js/exhibitions.js"></script>
+<script src="./js/role.js"></script>
+</body>
+</html> 

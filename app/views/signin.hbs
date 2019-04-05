@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+		<title>Вход</title>
+		<link rel="shortcut icon" href="./images/demo/logo.png" type="image/png">
+        <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script> 
+		<script src="https://unpkg.com/react-redux@5.0.7/dist/react-redux.min.js"></script>
+        <script type="text/babel" src="js/signin.js"></script>
+		<link rel="stylesheet" href="css/style-signin.css">
+	</head>
+    <body>
+		<div class="userForm">
+			<div align="center" class="signin">
+				<h1>Вход</h1>
+				<div align="center" style="color: #EF8354" class="errors">
+					<p id="message">{{signin_error}}</p>
+				</div>
+				<div id="root" align="center" class="form"></div>
+				<h1 align="center">Вход через соцсети</h1>
+				<div align="center">
+					<a href="/signin/tw"><img src="images/twitter.png" style="padding-bottom: 15px; padding-left: 15px;"/></a>
+					<a href="/signin/vk"><img src="images/vk.png"/></a>
+				</div>
+			</div>
+			<div align="center" class="registration">
+				<h1>До сих пор нет аккаунта? </h1>
+				<input type="button" value="Зарегистрироваться" onclick='location.href="./signup"'/>
+			</div>
+		</div>
+    </body>
+</html>

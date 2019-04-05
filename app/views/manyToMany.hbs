@@ -1,0 +1,17 @@
+<tbody>
+    <input type="text" value="{{message}}" readonly="true" style="width:777px"/>
+    {{#each result}}
+    <form name="UDManyToMany" method="post" action="/manyToMany">
+        <input class="text" name="employeeName" type="text" value="{{this.employee.name}}"/>
+        <input class="text" name="mission" type="text" value="{{this.depart.mission}}"/>
+        <input class="btn" type="submit" name="action" value="Delete" /></td>
+        <input class="btn" type="submit" name="action" value="Update" /></td>
+    </form>
+    </br>    
+    {{/each}}
+    <form name="addManyToMany" method="post" action="/manyToMany">
+        <input class="text" name="employeeName" type="text"/>
+        <input class="text" name="mission" type="text"/>
+        <input class="btn" type="submit" name="action" value="Add" /></td>
+    </form>
+</tbody>  

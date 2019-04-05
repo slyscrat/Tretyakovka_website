@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+<meta charset="utf-8" />
+<title>Профиль</title>
+<script src="https://cdn.conversejs.org/dist/converse.min.js"></script>
+<link rel="stylesheet" type="text/css" media="screen" href="https://cdn.conversejs.org/css/converse.min.css">
+<link rel="shortcut icon" href="./images/demo/logo.png" type="image/png">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<link href="./css/layout.css" rel="stylesheet" type="text/css" media="all">
+</head>
+<body id="top">
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- ################################################################################################ -->
+<!-- Top Background Image Wrapper -->
+<div class="bgded" style="background-image:url('./images/demo/backgrounds/06.jpg');"> 
+  <!-- ################################################################################################ -->
+  <div class="wrapper row1">
+    <header id="header" class="hoc clear"> 
+      <!-- ################################################################################################ -->
+      <div id="logo" class="fl_left">
+        <h1><a href="#">Третьяковская Галерея</a></h1>
+      </div>
+      <nav id="mainav" class="fl_right">
+      <nav id="mainav" class="fl_right">
+        <ul class="clear">
+          <li class="active"><a href="#">Личный кабинет</a></li>
+          <li><a class="drop" href="#">Галерея</a>
+            <ul>
+              <li><a href="./departs">Адреса</a></li>
+              <li><a href="./employees">Работники</a></li>
+			  <li><a href="./tickets">Билеты</a></li>
+            </ul>
+          </li>
+          <li><a class="drop" href="#">Образование</a>
+            <ul>
+              <li><a href="./programms">Программы</a></li>
+              <li><a class="drop" href="#">Картины</a>
+                <ul>
+                  <li><a href="./excursions">Экскурсии</a></li>
+                  <li><a href="./exhibitions">Выставки</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="./">Главная</a></li>
+		  <li><a  id="exch" href="./logout">Выход</a></li>
+        </ul>
+      </nav>
+      <!-- ################################################################################################ -->
+    </header>
+  </div>
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <!-- ################################################################################################ -->
+  <div class="wrapper">
+    <div class="hoc container testimonials clear"> 
+    <!-- ################################################################################################ -->
+    <div class="sectiontitle">
+      <h6 class="heading" style="color: white; font-size:35px">Профиль</h6>
+    </div>
+    <article class="one_half"><img id="img" src="{{user.photoUrl}}" style="width: 100px;" alt="">
+      <blockquote>
+			<h1>{{user.name}}</h1>
+			<h2 id="role">{{user.role}}</h2>
+			
+	  </blockquote>
+	  <blockquote>
+		<h2>Создан: {{user.createdAt}}</h2>
+	  </blockquote>
+	  <blockquote>
+		<h2>Последнее обновление: {{user.updatedAt}}</h2>
+	  </blockquote>
+    <!-- ################################################################################################ -->
+  </div>
+  </div>
+  <!-- ################################################################################################ -->
+</div>
+<div class="wrapper row5">
+  <div id="copyright" class="hoc clear"> 
+    <!-- ################################################################################################ -->
+    <p class="fl_left">Copyright &copy; 2017 - All Rights Reserved</p>
+<!-- ################################################################################################ -->
+  </div>
+</div>
+<!-- JAVASCRIPTS -->
+<script src="./js/jquery.min.js"></script>
+<script src="./js/jquery.backtotop.js"></script>
+<script src="./js/jquery.mobilemenu.js"></script>
+<script src="./js/dashboard.js"></script>
+</body>
+</html>

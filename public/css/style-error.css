@@ -1,0 +1,73 @@
+@media screen and (max-width:800px) {
+	h1 {
+		font-size: 50px;
+	}
+}
+@media screen and (min-width:801px) {
+	h1 { 
+		font-size: 100px;
+	}
+	h2 {
+		font-size: 50px;
+	}
+}
+h2 {
+	color: #EF8354; 
+	text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+	letter-spacing:1px; 
+	text-align:center; 
+}
+h1 {
+	color: #edf7f7; 
+	text-shadow: 0 0 10px rgba(0,0,0,0.3); 
+	letter-spacing:1px; 
+	text-align:center; 
+}
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+* { -webkit-box-sizing:border-box; 
+-moz-box-sizing:border-box; 
+-ms-box-sizing:border-box; 
+-o-box-sizing:border-box; 
+box-sizing:border-box; 
+	
+}
+
+.error {
+	margin-top: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-left: 100px;
+    margin-right: 100px;
+}
+
+body,
+html {
+	position: fixed;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	height:100%;
+	font-family: 'Open Sans', sans-serif;
+	background: url(../images/demo/backgrounds/07.jpg) repeat;
+}
+
+input { 
+	background: rgba(0,0,0,0.3);
+	outline: none;
+	padding: 10px;
+	font-size: 16px;
+	color: #edf7f7;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	box-shadow: inset 0 -5px 45px rgba(100,100,100,0.2), 0 1px 1px rgba(255,255,255,0.2);
+	-webkit-transition: box-shadow .5s ease;
+	-moz-transition: box-shadow .5s ease;
+	-o-transition: box-shadow .5s ease;
+	-ms-transition: box-shadow .5s ease;
+	transition: box-shadow .5s ease;
+}
+
+input:hover {
+	color: #EF8354;
+}

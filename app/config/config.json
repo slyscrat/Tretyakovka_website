@@ -1,0 +1,60 @@
+{
+  "development": {
+      "username": "postgres",
+      "password": "superhot",
+      "database": "tretya",
+      "host": "localhost",
+      "port": 5432,
+      "dialect": "postgres",
+      "operatorsAliases" : {
+          "$and": "Op.and",
+          "$or": "Op.or",
+          "$eq": "Op.eq",
+          "$gt": "Op.gt",
+          "$lt": "Op.lt",
+          "$lte": "Op.lte",
+          "$like": "Op.like"
+        }
+  },
+
+  "auth": {
+    "fb": {
+        "app_id": 500637313664978,
+        "secret": "50647b97420a6a357a6ee12dea4b4ab2"
+    },
+    "vk": {
+        "app_id": 6450784,
+        "secret": "yfXzd9RmQ5gzU1O0guRk",
+        "callbackURL" : "http://localhost:8023/"
+    },
+    "twitter":{
+        "app_id":"cJHixCOwzPwKD2IZrdBXicbIr",
+        "secret":"7UARdCUN4njXCO1G0UNDeP5N7YjQ8Bgs7NsyhrWCBj8AFLj2fu"
+    }
+  },
+
+  "app": {
+    "host": "localhost",
+    "port": 8080,
+    "schema": "http",
+    "url": "http://localhost:8080"
+},
+
+  "production": {
+      "username": "postgres",
+      "password": "superhot",
+      "database": "tretya",
+      "host": "localhost",
+      "port": 5432,
+      "dialect": "postgres",
+      "operatorsAliases" : {
+          "$and": "Op.and",
+          "$or": "Op.or",
+          "$eq": "Op.eq",
+          "$gt": "Op.gt",
+          "$lt": "Op.lt",
+          "$lte": "Op.lte",
+          "$like": "Op.like"
+        }
+  }
+}

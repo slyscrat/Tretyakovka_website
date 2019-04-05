@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <title>Регистрация</title>
+		<link rel="shortcut icon" href="./images/demo/logo.png" type="image/png">
+        <script src="https://unpkg.com/react@15/dist/react.min.js"></script>
+        <script src="https://unpkg.com/react-dom@15/dist/react-dom.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.21.1/babel.min.js"></script> 
+        <script type="text/babel" src="js/signup.js"></script> 
+		<link rel="stylesheet" href="css/style-signup.css">
+    </head>
+    <body>
+        <div class="regForm">
+            <div align="center" class="signin">
+                <h1>Регистрация</h1>
+                <div align="center" style="color: #EF8354" class="errors">
+                    <p id="message">{{signup_error}}</p>
+                </div>
+                <div id="root" align="center" class="form"></div>
+            </div>
+            <div align="center" class="signin">
+                <h1>Есть аккаунт?</h1>
+                <input type="button" value="Войти" onclick='location.href="./signin"'/>
+            </div>
+        </div>
+     </body>
+</html>
